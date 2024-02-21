@@ -5,6 +5,9 @@ def downscale_image(image_path, factor):
     original_image = Image.open(image_path)
     original_width, original_height = original_image.size
 
+    print(f"Original image size: {original_width}x{original_height}")
+    print(f"Downscaling factor: {factor}")
+
     # Calculate the dimensions of the downscaled image
     new_width = original_width // factor
     new_height = original_height // factor
@@ -34,6 +37,8 @@ def downscale_image(image_path, factor):
 
     # Save the downscaled image
     downscaled_image.save("Output/downscaled_image.png")
+
+    print(f"Downscaled image size: {new_width}x{new_height}")
 
 
 if __name__ == "__main__":

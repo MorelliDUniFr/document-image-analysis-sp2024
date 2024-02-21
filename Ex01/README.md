@@ -1,10 +1,10 @@
 # Exercise 1: Image Downscaling
 
 ## Informations 
-Author: Davide Morelli
-Github: XXX
+Author: Davide Morelli \
+Github: https://github.com/MorelliDUniFr/document-image-analysis-sp2024/tree/main/Ex01
 
-### Downscaling Algorithm Explanation
+## Downscaling Algorithm Explanation
 
 1. **Opening the Image**: 
    We start by opening the original image using the Python Imaging Library (PIL) module.
