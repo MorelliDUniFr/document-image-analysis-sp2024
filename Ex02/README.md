@@ -5,7 +5,7 @@ Author: Davide Morelli \
 Github: https://github.com/MorelliDUniFr/document-image-analysis-sp2024/tree/main/Ex02
 
 ## Conversion of RGB image to grayscale
-We open the original image, and 2e create a new blank image with mode "L" (grayscale) using Image.new().
+We open the original image, and create a new blank image with mode "L" (grayscale) using Image.new().
 We iterate over each pixel in the original image, and for each pixel, we calculate the grayscale value using the luminosity method: 
 `grayscale_value = 0.21*R + 0.72*G + 0.07*B`
 where R, G, and B are the red, green, and blue values of the pixel, respectively.
