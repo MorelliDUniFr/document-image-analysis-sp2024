@@ -79,6 +79,30 @@ def plot_combined_histogram(histogram):
     print("Combined Histogram plotted and saved")
 
 
+def combine_rgb_histogram_in_one_image(hist_r, hist_g, hist_b):
+    plt.figure()
+    plt.subplot(3, 1, 1)
+    plt.bar(range(256), hist_r, color=color_map['r'])
+    plt.title('Red Histogram')
+    plt.xlabel('Pixel Value')
+    plt.ylabel('Frequency')
+
+    plt.subplot(3, 1, 2)
+    plt.bar(range(256), hist_g, color=color_map['g'])
+    plt.title('Green Histogram')
+    plt.xlabel('Pixel Value')
+    plt.ylabel('Frequency')
+
+    plt.subplot(3, 1, 3)
+    plt.bar(range(256), hist_b, color=color_map['b'])
+    plt.title('Blue Histogram')
+    plt.xlabel('Pixel Value')
+    plt.ylabel('Frequency')
+
+    plt.subplots_adjust(hspace=2.0)
+    plt.savefig('Output/RGB_Histograms.png')
+    print("RGB Histograms plotted and saved")
+
 if __name__ == "__main__":
     print("Exercise 02")
 
@@ -116,6 +140,9 @@ if __name__ == "__main__":
     plot_histogram(histogram_r, 'Red Histogram', color_map['r'])
     plot_histogram(histogram_g, 'Green Histogram', color_map['g'])
     plot_histogram(histogram_b, 'Blue Histogram', color_map['b'])
+
+    # Combine the histograms in one image
+    combine_rgb_histogram_in_one_image(histogram_r, histogram_g, histogram_b)
 
     # Create a combined histogram
     combined_histogram = compute_combined_histogram(histogram_r, histogram_g, histogram_b)
